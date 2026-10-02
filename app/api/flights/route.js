@@ -15,7 +15,7 @@ export async function GET(request) {
 
   try {
     const response = await axios.get(
-      `https://seats.aero/api/search?origin_airports=${origin}&destination_airports=${destination}&cabin=business`,
+      `https://seats.aero/partnerapi/search?origin_airport=${origin}&destination_airport=${destination}&cabin=business`,
       {
         headers: {
           'Partner-Authorization': process.env.SEATS_AERO_API_KEY,
